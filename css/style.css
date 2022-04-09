@@ -1,0 +1,350 @@
+/* ======================= Fonts ========================== */
+
+@font-face {
+    font-family: "Almarai";
+    src: url("../fonts/Almarai-Bold.woff2") format("woff2"), url("../fonts/Almarai-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Almarai";
+    src: url("../fonts/Almarai-ExtraBold.woff2") format("woff2"), url("../fonts/Almarai-ExtraBold.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Almarai";
+    src: url("../fonts/Almarai-Light.woff2") format("woff2"), url("../fonts/Almarai-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Almarai";
+    src: url("../fonts/Almarai-Regular.woff2") format("woff2"), url("../fonts/Almarai-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* Some Main Rules */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    display: inline-block;
+}
+
+body {
+    font-family: "Almarai", "sans-serif";
+    direction: rtl;
+}
+
+:root {
+    --main-transition: 0.4s;
+}
+
+
+/* ======= Utilties ========= */
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2f2f2f;
+}
+
+.section-title span {
+    color: #9866b7;
+}
+
+.section-title::after {
+    content: "";
+    width: 100px;
+    height: 4px;
+    display: block;
+    background-color: #9866b7;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 13px;
+}
+
+
+/* ======================== Navbar ================== */
+
+.navbar {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.navbar-brand {
+    width: 230px;
+}
+
+.navbar-toggler i {
+    font-size: 25px;
+    color: #9866b7;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem #9866b7;
+}
+
+.nav-link {
+    color: #707070;
+    font-size: 17px;
+    transition: color var(--main-transition);
+}
+
+.nav-link:hover {
+    color: #9866b7;
+}
+
+@media (max-width: 767px) {
+    .nav-link {
+        margin-top: 10px;
+    }
+}
+
+.nav-register-link {
+    border: 1px solid #9866b7;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.nav-register-link:hover {
+    color: #fff;
+    background-color: #9866b7;
+}
+
+
+/* ======================= header ========================= */
+
+.header {
+    padding: 40px 0;
+    background-image: url("../images/header_back.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.header-text p {
+    line-height: 1.9;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.header-text a {
+    background-color: #fff;
+    color: #9866b7;
+    padding: 10px 50px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.header-video {
+    position: relative;
+}
+
+.header-video button {
+    font-size: 22px;
+    color: #9866b7;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* ======================= why us ==================== */
+
+.why-us-text h2 {
+    font-size: 23px;
+    color: #9866b7;
+}
+
+.why-us-text p {
+    line-height: 1.9;
+    font-size: 20px;
+    color: #2f2f2f;
+}
+
+
+/* =========================== our statics ===================== */
+
+.our-statics-box {
+    box-shadow: 0 6px 11px rgba(0, 0, 0, 0.109);
+    text-align: center;
+    padding: 10px;
+    border-radius: 7px;
+    transition: var(--main-transition);
+    margin-bottom: 25px;
+}
+
+.our-statics-box.active {
+    color: #fff;
+    background-color: #9866b7;
+}
+
+.our-statics-box.active .svg {
+    fill: #fff;
+}
+
+.our-statics-box .svg {
+    margin: 12px 0;
+    fill: #9866b7;
+    min-height: 60px;
+}
+
+.our-statics-box span {
+    color: #9866b7;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.our-statics-box.active span {
+    color: #fff;
+}
+
+
+/* hover */
+
+.our-statics-box:hover {
+    transform: translateY(-12px);
+    background-color: #9866b7;
+}
+
+.our-statics-box:hover p {
+    color: #fff;
+}
+
+.our-statics-box:hover span {
+    color: #fff;
+}
+
+.our-statics-box:hover svg {
+    fill: #fff;
+}
+
+
+/* ========================= Start our Feats ==================== */
+
+.our-feats {
+    background-color: #f9f9f9;
+}
+
+.our-feats-text li {
+    margin-bottom: 32px;
+    color: #818181;
+    font-size: 18px;
+}
+
+.our-feats-text li span:first-of-type {
+    color: #fff;
+    background-color: #9866b7;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 13px;
+}
+
+
+/* ========================= Footer ======================== */
+
+.footer {
+    background-color: #3a3a3a;
+    color: #fff;
+    padding: 45px 0;
+}
+
+.footer-info p {
+    line-height: 1.9;
+}
+
+.footer .section-title {
+    color: #fff;
+}
+
+.footer .section-title::after {
+    margin-right: 0;
+    margin-left: 0;
+    width: 30%;
+}
+
+.footer ul a {
+    color: #fff;
+    font-size: 15px;
+    margin-top: 18px;
+    display: block;
+}
+
+.footer-social-media ul a {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #525252;
+}
+
+
+/* company rights footer */
+
+.company-rights {
+    background-color: #9866b7;
+    color: #fff;
+}
+
+.company-rights ul a {
+    color: #fff;
+}
+
+
+/* creator rights footer */
+
+.creator-rights {
+    background-color: #fff;
+    font-size: 1rem;
+}
+
+.creator-rights a {
+    color: #9866b7;
+}
