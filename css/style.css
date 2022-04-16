@@ -96,6 +96,28 @@ body {
 }
 
 
+/* whats app icon */
+
+.whats-app {
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    width: 50px;
+    height: 50px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whats-app a {
+    color: #fff;
+}
+
+
 /* ======================== Navbar ================== */
 
 .navbar {
@@ -152,6 +174,13 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
+    position: relative;
+}
+
+.header-svg {
+    position: absolute;
+    top: 2%;
+    right: 51%;
 }
 
 .header-text p {
@@ -174,9 +203,10 @@ body {
 
 .header-video button {
     font-size: 22px;
-    color: #9866b7;
-    width: 50px;
-    height: 50px;
+    color: #fff;
+    background-color: #9866b7;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -323,6 +353,13 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #525252;
+    transition: var(--main-transition);
+}
+
+@media (min-width: 768px) {
+    .footer-social-media ul a:hover {
+        transform: translateY(-10px);
+    }
 }
 
 
@@ -342,9 +379,239 @@ body {
 
 .creator-rights {
     background-color: #fff;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .creator-rights a {
+    color: #9866b7;
+}
+
+
+/* ================================= Courses page ========================== */
+
+.course-body {
+    background-image: url("../images/courses_svg_back.svg");
+    background-repeat: no-repeat;
+    background-position: left -250px;
+    background-size: contain;
+}
+
+.courses-svg-back {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
+.courses-menu ul {
+    padding: 2px 4px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+}
+
+.menu-offline-courses,
+.menu-online-courses {
+    border-radius: 10px;
+    font-size: 19px;
+    text-align: center;
+    padding: 14px 60px;
+    display: block;
+}
+
+.menu-offline-courses,
+.menu-online-courses {
+    color: #9a9a9a;
+    background-color: #f2f2f2;
+    margin-left: 5px;
+}
+
+.menu-offline-courses.active,
+.menu-online-courses.active {
+    color: #fff;
+    background-color: #9866b7;
+}
+
+.courses-content-categories {
+    min-height: 300px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+    margin-bottom: 15px;
+}
+
+.courses-content-categories .search-field {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    border: 1px solid #f1f1f1;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.courses-content-categories .search-field i {
+    color: #9a9a9a;
+}
+
+.courses-content-categories .search-field input {
+    border: 0;
+    width: 90%;
+    padding: 10px 7px;
+    background-color: #f9f9f9;
+}
+
+.courses-content-categories .form-check-input:checked {
+    background-color: #9866b7;
+    border-color: #9866b7;
+    box-shadow: 0 0 0 0.25rem rgb(152 102 183 / 25%);
+}
+
+.courses-content-categories label {
+    font-size: 15px;
+    font-weight: bold;
+    color: #9866b7;
+}
+
+.tutorials-box {
+    border-radius: 7px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 12%);
+    min-height: 300px;
+    margin-bottom: 25px;
+}
+
+.tutorials-box img {
+    width: 100%;
+}
+
+.tutorials-box .tutorials-box-info {
+    padding: 14px 12px;
+}
+
+.tutorials-box .course-name,
+.tutorials-box .course-price {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.tutorials-box .course-name {
+    color: #9866b7;
+}
+
+.tutorials-box .course-price {
+    color: #6acc87;
+}
+
+.tutorials-box .course-date {
+    border-top: 1px solid #e8e8e8;
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.tutorials-box .course-date span:first-of-type {
+    color: #9e9e9e;
+}
+
+.tutorials-box p {
+    line-height: 1.8;
+    font-size: 17px;
+    color: #818181;
+}
+
+.svg-animation {
+    animation: svg-motion 1.4s ease-in-out infinite alternate;
+    color: rgb(152, 102, 183);
+}
+
+@keyframes svg-motion {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-25px);
+    }
+}
+
+.play-button-effect {
+    animation: play-button-effect 1.2s linear infinite;
+    color: rgb(152, 102, 183);
+}
+
+@keyframes play-button-effect {
+    0% {
+        box-shadow: 0 0 0 0 rgba(152, 102, 183, 0.5), 0 0 0 0 rgba(152, 102, 183, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 0 10px rgba(152, 102, 183, 0), 0 0 0 20px rgba(152, 102, 183, 0);
+    }
+}
+
+
+/* ==================== Contact Us Page ===============*/
+
+.contact-us {
+    margin-top: 70px;
+}
+
+.contact-us h2 {
+    color: #9866b7;
+    font-weight: bold;
+}
+
+.contact-us-text p {
+    line-height: 1.9;
+    color: #8d8d8d;
+    font-size: 19px;
+}
+
+.contact-us-form {
+    padding: 15px 25px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+}
+
+.contact-us-form input,
+.contact-us-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    text-align: right;
+    padding-right: 4px;
+    border: 1px solid #e5e5e5;
+    border-radius: 7px;
+    font-size: 18px;
+}
+
+.contact-us-form input:focus,
+.contact-us-form textarea:focus {
+    border-color: #9866b7;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.contact-us-form textarea {
+    min-height: 150px;
+    resize: none;
+    overflow-y: auto;
+}
+
+.contact-us-form input[type="submit"] {
+    background-color: #9866b7;
+    border: 1px solid #9866b7;
+    color: #fff;
+    text-align: center;
+    padding: 9px 15px;
+    font-size: 19px;
+    font-weight: bold;
+    border-radius: 7px;
+    transition: 0.4s;
+}
+
+.contact-us-form input[type="submit"]:hover {
+    background-color: transparent;
     color: #9866b7;
 }

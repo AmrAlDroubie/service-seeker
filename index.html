@@ -8,6 +8,8 @@
     <title>Production</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="css/all.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="css/animate.min.css">
     <!-- bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
     <!-- Main Style -->
@@ -15,6 +17,10 @@
 </head>
 
 <body>
+
+
+    <!-- whatsapp -->
+    <a href="#" class="whats-app"><i class="fab fa-whatsapp"></i></a>
 
 
     <!-- ======================= Start Navbar =================== -->
@@ -32,7 +38,7 @@
                         <a href="./index.html" class="nav-link">الرئيسية</a>
                     </li>
                     <li class="nav-item">
-                        <a href="./courses.html" class="nav-link">الدورات التعليمية</a>
+                        <a href="./online_courses.html" class="nav-link">الدورات التعليمية</a>
                     </li>
                     <li class="nav-item">
                         <a href="./contact-us.html" class="nav-link">تواصل معنا</a>
@@ -57,6 +63,7 @@
     <!-- ===================== Start  header ======================== -->
     <header class="header">
         <div class="container">
+            <img src="images/header_svg.svg" class="header-svg" alt="">
             <div class="row">
                 <div class="col-lg-6 col-12">
                     <div class="header-text mt-lg-5">
@@ -73,7 +80,7 @@
                 </div>
                 <div class="col-lg-6 col-12">
                     <div class="header-video mt-lg-0 mt-4">
-                        <button class="header-play-video-btn">
+                        <button class="header-play-video-btn play-button-effect ">
                             <i class="fas fa-play"></i>
                         </button>
                         <img src="images/header_image.png" class="w-100" alt="">
@@ -105,7 +112,7 @@
                 </div>
                 <div class="col-lg-6 col-12">
                     <div class="why-us-image">
-                        <img src="images/why_us_image.svg" class="d-block ms-lg-auto me-lg-0 ms-auto me-auto" alt="">
+                        <img src="images/why_us_image.svg" class="svg-animation d-block ms-lg-auto me-lg-0 ms-auto me-auto" alt="">
                     </div>
                 </div>
             </div>
@@ -252,7 +259,7 @@
                 </div>
                 <div class="col-md-6 col-12 order-md-2 order-1">
                     <div class="our-feats-image">
-                        <img src="images/feats_image.svg" class="d-block ms-lg-auto me-lg-0 ms-auto  me-auto" alt="">
+                        <img src="images/feats_image.svg" class="svg-animation d-block ms-lg-auto me-lg-0 ms-auto  me-auto" alt="">
                     </div>
                 </div>
             </div>
@@ -355,9 +362,19 @@
     <!-- ========================== End Footer =========================== -->
 
 
-
-
+    <!-- wow js -->
+    <script src="js/wow.min.js"></script>
+    <!-- bootstrap -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        new WOW().init();
+
+        document.addEventListener('mousemove', (e) => {
+            const x = (window.innerWidth - e.pageX * 1) / 50;
+            const y = (window.innerWidth - e.pageY * 2) / 150;
+            document.querySelector(".header-svg").style.transform = `translate(${x}px,${y}px)`;
+        })
+    </script>
 </body>
 
 </html>
