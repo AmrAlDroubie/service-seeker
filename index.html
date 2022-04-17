@@ -8,8 +8,6 @@
     <title>Production</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="css/all.min.css">
-    <!-- animate css -->
-    <link rel="stylesheet" href="css/animate.min.css">
     <!-- bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
     <!-- Main Style -->
@@ -41,7 +39,7 @@
                         <a href="./online_courses.html" class="nav-link">الدورات التعليمية</a>
                     </li>
                     <li class="nav-item">
-                        <a href="./contact-us.html" class="nav-link">تواصل معنا</a>
+                        <a href="./contact_us.html" class="nav-link">تواصل معنا</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-lg-auto">
@@ -269,6 +267,56 @@
     <!-- =========================== End Our Features ======================== -->
 
 
+    <!-- ========================== Start Adverse Course ===================== -->
+
+    <section class="ad-course py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="ad-course-content">
+                        <form action="">
+                            <div>
+                                <label for="" class="d-block">التفاصيل</label>
+                                <textarea name="" id=""></textarea>
+                            </div>
+                            <div class="upload-part col-12  row mt-3 mx-auto align-items-center">
+                                <div class="text col-12 col-lg-6">
+                                    <img src="images/upload_icon.svg" alt="">
+                                    <p class="mt-2">
+                                        اختر ملف لتقوم برفعه , يمكنك سحب الملف وافلاته أو الضغط واختياره من القائمة
+                                    </p>
+                                    <input multiple type="file" name="" id="" class="file-btn-source ">
+                                    <div class="file-btn-appearance my-2">
+                                        إرفاق ملف
+                                    </div>
+                                    <span id="file-name"></span>
+                                </div>
+                                <div class="image-preview col-12 col-lg-6 d-md-flex d-none">
+                                    <img src="images/img_preview.svg" alt="">
+                                </div>
+                            </div>
+                        </form>
+                        <button class="btn">
+                            <i class="fas fa-bullhorn"></i>
+                            <span>
+                                إرسال الإعلان
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="ad-course-image">
+                        <img src="images/ad_course_img.svg" class="mx-auto d-block svg-animation" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================== End Adverse Course ===================== -->
+
+
+
     <!-- ========================== Start Footer ========================= -->
     <footer class="footer">
         <div class="container">
@@ -362,18 +410,24 @@
     <!-- ========================== End Footer =========================== -->
 
 
-    <!-- wow js -->
-    <script src="js/wow.min.js"></script>
     <!-- bootstrap -->
     <script src="js/bootstrap.min.js"></script>
     <script>
-        new WOW().init();
-
         document.addEventListener('mousemove', (e) => {
             const x = (window.innerWidth - e.pageX * 1) / 50;
             const y = (window.innerWidth - e.pageY * 2) / 150;
             document.querySelector(".header-svg").style.transform = `translate(${x}px,${y}px)`;
-        })
+        });
+
+        document.querySelector(".file-btn-appearance").onclick = function() {
+            document.querySelector(".file-btn-source").click();
+        }
+
+        document.querySelector(".file-btn-source").onchange = function() {
+            document.getElementById("file-name").textContent = this.value;
+            document.querySelector(".image-preview img").src = this.value;
+            console.log(this.value)
+        };
     </script>
 </body>
 
