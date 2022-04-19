@@ -17,6 +17,29 @@
 
 <body>
 
+    <!-- -- Forget Password pop up -->
+    <div class="modal fade" id="forget-password">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">تغيير كلمة المرور</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-3">
+                    <form action="">
+                        <label for=""> أدخل بريد الإلكتروني سيتم إرسال رسالة تغيير كلمة المرور إليه</label><br>
+                        <input type="email" name="" id="" class="back-input d-block w-100 border-0   py-2 text-start my-3 rounded-2" placeholder="أدخل بريدك الإلكتروني">
+                        <button class="btn text-white py-2 px-3 main-back">
+                            تغيير كلمة المرور
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <div class="container">
         <div class="login-box">
             <div class="row">
@@ -37,7 +60,7 @@
                             <div class="input-group mt-1">
                                 <i class="input-group-text fw-bolder fa-solid fa-lock"></i>
                                 <input type="password" class="form-control" placeholder="كلمة المرور" aria-label="Username" aria-describedby="basic-addon1">
-                                <a href="#" class="d-block my-2 w-100 text-end">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#forget-password" class="d-block my-2 w-100 text-end" id="forget-pass-btn">
                                     هل نسيت كلمة المرور ؟
                                 </a>
                             </div>
@@ -67,6 +90,11 @@
 
 
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById("forget-pass-btn").onclick = function(e) {
+            e.preventDefault();
+        }
+    </script>
 </body>
 
 
