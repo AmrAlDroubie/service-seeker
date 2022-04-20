@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <div class="rate-course py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6">
+                    <div class="rate-course-content">
+                        <div class="course-rated-info p-3">
+                            <span class="main-color fs-5 fw-bold">
+                                عالم المال والأسهم
+                            </span>
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <div class="rate-course-teacher d-flex align-items-center">
+                                    <img src="images/offline_teacher_img.png" alt="">
+                                    <div class="ms-3">
+                                        <span class="main-color">
+                                            المحاضر
+                                        </span>
+                                        <br>
+                                        <span>
+                                            عمرو الدروبي
+                                        </span>
+                                    </div>
+                                </div>
+                                <span class="main-color fw-bold">
+                                    50 ر.س
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="rate-course-add mt-5">
+                            <h6 class="main-color fs-5 fw-bold mb-2">
+                                أضف تقييم
+                            </h6>
+
+                            <form action="">
+                                <div class="d-flex align-items-start">
+                                    <div class="rate-course-add-stars d-flex flex-md-column align-items-center justify-content-center flex-row">
+                                        <div class="before"></div>
+                                        <i class="fas fa fa-star  fs-6 "></i>
+                                        <i class="fas fa fa-star  fs-6 main-color"></i>
+                                        <i class="fas fa fa-star fs-6 main-color"></i>
+                                        <i class="fas fa fa-star  fs-6 main-color"></i>
+                                        <i class="fas fa fa-star  fs-6 main-color"></i>
+                                    </div>
+                                    <div class="ms-2 rate-course-textarea w-100">
+                                        <textarea name="" id="" class="w-100 d-block" placeholder="ضع رأيك في الكورس هنا"></textarea>
+                                    </div>
+                                </div>
+                                <button class="btn main-back text-white text-center fs-5 fw-bold d-block py-2 w-100 my-3">
+                                    إضافة
+                                    تقييم
+                                </button>
+                            </form>
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="rate-course-image">
+                        <img src="images/rate_course_image.svg" class="d-block ms-auto" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(".rate-course-add-stars .fa-star").on('click', function() {
+            $(this).addClass('active').prevAll('.fa-star').addClass('active');
+            $(this).nextAll('.fa-star').removeClass('active');
+        })
+
+        $(".rate-course-add-stars .fa-star").hover(function() {
+            $(this).css({
+                "background-color": "#9866b7",
+                "color": "#fff"
+            }).prevAll('.fa-star').css({
+                "background-color": "#9866b7",
+                "color": "#fff"
+            })
+        }, function() {
+            $(this).css({
+                "background-color": "#fff",
+                "color": "#dcdcdc"
+            }).siblings('.fa-star').css({
+                "background-color": "#fff",
+                "color": "#dcdcdc"
+            })
+        })
+    </script>
+</body>
+
+
+</html>

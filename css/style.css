@@ -1469,3 +1469,61 @@ input::-webkit-inner-spin-button {
 .privacy-content p {
     color: #857d7d;
 }
+
+
+/* ====================== Rate Course page ===================== */
+
+.course-rated-info {
+    background-color: #fbf5ff;
+    border: 1px solid #9866b7;
+    border-radius: 15px;
+}
+
+.rate-course-add-stars {
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.rate-course-add-stars .before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    background-color: #9866b7;
+}
+
+.rate-course-add-stars i {
+    color: #dcdcdc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 16px;
+    padding: 5px 10px;
+    position: relative;
+    transition: var(--main-transition);
+}
+
+.rate-course-add-stars i.active {
+    color: #fff !important;
+    background-color: #9866b7 !important;
+}
+
+@media (min-width: 768px) {
+    .rate-course-add-stars {
+        width: 10%;
+    }
+}
+
+.rate-course-textarea textarea {
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    overflow: auto;
+    resize: vertical;
+    min-height: 133px;
+    padding: 10px;
+}
