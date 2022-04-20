@@ -1527,3 +1527,80 @@ input::-webkit-inner-spin-button {
     min-height: 133px;
     padding: 10px;
 }
+
+
+/* ============================= User Dashboard Pages ====================== */
+
+.user-dash {
+    min-height: 710px;
+}
+
+.user-dash-panel {
+    background-color: #9866b7;
+    padding: 12px 10px;
+    border-radius: 24px;
+    min-height: 600px;
+}
+
+.user-dash-panel-userinfo {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 19px;
+    color: #fff;
+    padding: 10px;
+}
+
+.user-dash-panel-userinfo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+.user-dash-panel-menu a {
+    color: rgba(255, 255, 255, 76%);
+    display: block;
+    margin-top: 18px;
+    padding-right: 1rem;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 20px;
+    letter-spacing: 1.2px;
+}
+
+.user-dash-panel-menu a.active,
+.user-dash-panel-menu a:hover {
+    background-color: rgba(255, 255, 255, 10%);
+    color: #fff;
+}
+
+.user-dash-panel-menu .svg-icon {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.user-dash-panel-menu a svg {
+    fill: rgba(255, 255, 255, 76%);
+    width: 18px;
+}
+
+.user-dash-panel-menu a.active svg,
+.user-dash-panel-menu a:hover svg {
+    fill: #fff;
+}
+
+.dash-user-logout {
+    bottom: 150px;
+    right: 30px;
+}
+
+
+/* -- dashboard -- */
+
+.breadcrumb-dash .breadcrumb-item+.breadcrumb-item::before {
+    color: #6c757d;
+}
+
+.dash-user-dashboard-icons img {
+    width: 34px;
+    height: 34px;
+}
