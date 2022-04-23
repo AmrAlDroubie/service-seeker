@@ -38,7 +38,7 @@
                         <div class="user-dash-panel-menu ">
                             <ul>
                                 <li>
-                                    <a href="./user_dash.html" class="active">
+                                    <a href="./user_dash.html">
                                         <div class="svg-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.438 9.476">
                                                 <g transform="translate(560.107 -395.073)">
@@ -87,7 +87,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="./dash_my_subs.html">
+                                    <a href="./dash_my_subs.html" class="active">
                                         <div class="svg-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.665 11.961">
                                                 <g transform="translate(-3.035 -363.961)">
@@ -168,9 +168,12 @@
                                 <img src="images/dash_logo.svg" alt="">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb breadcrumb-dash mt-2">
-                                        <li class="breadcrumb-item "><a href="#" class="text-secondary">الرئيسية</a>
+                                        <li class="breadcrumb-item "><a href="./index.html" class="text-secondary">الرئيسية</a>
                                         </li>
-                                        <li class="breadcrumb-item active text-secondary" aria-current="page">لوحة التحكم
+                                        <li class="breadcrumb-item "><a href="./user_dash.html" class="text-secondary">لوحة التحكم</a>
+                                        </li>
+                                        <li class="breadcrumb-item active text-secondary" aria-current="page">
+                                            دوراتي
                                         </li>
                                     </ol>
                                 </nav>
@@ -272,49 +275,56 @@
 
 
                         <!-- -- dash page content -- -->
-                        <div class="analytics-dash mt-3">
-                            <div class="row">
-                                <div class="col-12 col-md-4 col-12">
-                                    <div class="analytics-dash-box analytics-dash-box1">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <img src="images/dash_icon_analytics1.svg" alt="">
-                                            <span>10</span>
-                                        </div>
-                                        <p class="mt-3 text-white fw-bold">
-                                            دوراتي
-                                        </p>
-                                        <a href="./dash_my_courses.html">مشاهدة الكل</a>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-md-4 col-12 mt-md-0 mt-4">
-                                    <div class="analytics-dash-box analytics-dash-box2">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <img src="images/dash_icon_analytics2.svg" alt="">
-                                            <span>10</span>
-                                        </div>
-                                        <p class="mt-3 text-white fw-bold">
-                                            اشتراكاتي
-                                        </p>
-                                        <a href="./dash_my_subs.html">مشاهدة الكل</a>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-12 col-md-4 col-12  mt-md-0  mt-4">
-                                    <div class="analytics-dash-box analytics-dash-box3">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <img src="images/dash_icon_analytics3.svg" alt="">
-                                            <span>10</span>
-                                        </div>
-                                        <p class="mt-3 text-white fw-bold">
-                                            فواتيري
-                                        </p>
-                                        <a href="./dash_my_invoice.html">مشاهدة الكل</a>
-                                    </div>
+                        <!-- dash my subs -->
+                        <div class="row">
+                            <div class="col-12">
+                                <h5 class="main-color fw-bold">
+                                    قوائم الإشتراكات
+                                </h5>
+                                <p class="text-secondary mb-0">
+                                    عرض من ا-3 من 20 نتيجة
+                                </p>
+                                <div class="table table-responsive dash-subs">
+                                    <table class="dash-subs-table mt-3">
+                                        <thead>
+                                            <tr>
+                                                <th>اسم الدورة</th>
+                                                <th>تكلفتها</th>
+                                                <th>مدة الاشتراك</th>
+                                                <th>خصائص أخرى</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- table row -->
+                                            <tr>
+                                                <td class="main-color">اسم الدورة</td>
+                                                <td>2500 RAS</td>
+                                                <td>سنة</td>
+                                                <td>تحديات عرض وطلب. النظرة الفنية لجميع الأسواق.</td>
+                                            </tr>
+                                            <!-- table row -->
+                                            <tr>
+                                                <td class="main-color">اسم الدورة</td>
+                                                <td>2500 RAS</td>
+                                                <td>سنة</td>
+                                                <td>تحديات عرض وطلب. النظرة الفنية لجميع الأسواق.</td>
+                                            </tr>
+                                            <!-- table row -->
+                                            <tr>
+                                                <td class="main-color">اسم الدورة</td>
+                                                <td>2500 RAS</td>
+                                                <td>سنة</td>
+                                                <td>تحديات عرض وطلب. النظرة الفنية لجميع الأسواق.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- -- dash page content -- -->
+
+
                     </div>
                 </div>
 
@@ -326,13 +336,9 @@
 
 
 
-
-
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>
-    <script>
-    </script>
 </body>
 
 </html>

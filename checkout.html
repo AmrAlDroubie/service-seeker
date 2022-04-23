@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- whatsapp -->
+    <a href="#" class="whats-app"><i class="fab fa-whatsapp"></i></a>
+
+
+    <section class="checkout mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <form action="">
+                        <div class="checkout-content">
+                            <!-- input  box -->
+                            <div>
+                                <span class="fw-bold fs-5 mb-1 d-block">رقم الكارت</span>
+                                <span class="d-block text-secondary">
+                                    ادخل الست عشر رقم الخاصة بكرت الدفع
+                                </span>
+                                <input type="text" id="card-number" class="d-block w-100 py-2 mt-2" placeholder="xxxx-xxxx-xxxx-xxxx">
+                            </div>
+                            <!-- input box  -->
+                            <div class="mt-4">
+                                <span class="fw-bold fs-5 mb-1 d-block">رقم ال CVV</span>
+                                <span class="d-block text-secondary">
+                                    ادخل الثلاث او الاربع ارقام الخاصة
+                                </span>
+                                <input type="text" id="card-cvv" class="d-block w-100 py-2 mt-2" placeholder="xxx">
+                            </div>
+
+                            <!-- input box  -->
+                            <div class="mt-4">
+                                <span class="fw-bold fs-5 mb-1 d-block">تاريخ الانتهاء</span>
+                                <span class="d-block text-secondary">
+                                    ادخل تاريخ انتهاء البطاقة
+                                </span>
+                                <div class="d-flex align-items-center mt-2">
+                                    <input type="text" id="checkout-month" class="d-block w-100 py-2" placeholder="الشهر">
+                                    <span class="fw-bold mx-3 fs-3 d-block">/</span>
+                                    <input type="text" class="d-block w-100 py-2  me-2" id="checkout-day" placeholder="اليوم">
+                                </div>
+                            </div>
+
+
+                            <!-- input box  -->
+                            <div class="mt-4">
+                                <span class="fw-bold fs-5 mb-1 d-block">كلمة المرور</span>
+                                <span class="d-block text-secondary">
+                                    ادخل كلمة المرور الخاصة بالبطاقة
+                                </span>
+                                <input type="password" id="card-number" class="d-block w-100 py-2 mt-2">
+                            </div>
+
+
+                            <button class="btn my-3 w-100 py-2 main-back text-white rounded-2 shadow-none">
+                                دفع الان
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <!-- deserved amount  -->
+                    <div class="deserved-amount mx-auto d-flex mb-5 px-4 py-3 justify-content-between align-items-center">
+
+                        <div>
+                            <span class="main-color">سيتم دفع</span>
+                            <p class="mb-0">
+                                <span>450</span> ر.س
+                            </p>
+                        </div>
+
+                        <img src="images/deserved_amount_icon.svg" alt="">
+                    </div>
+                    <div class="checkout-image">
+                        <img src="images/checkout_hero.svg" class="d-block mx-auto" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/cleave.min.js"></script>
+    <script>
+        const cardNumber = new Cleave('#card-number', {
+            creditCard: true,
+            blocks: [4, 4, 4, 4],
+            delimiter: '-'
+        });
+
+        const month = new Cleave('#checkout-month', {
+            date: true,
+            datePattern: ['m'],
+        });
+
+        const cvv = new Cleave('#card-cvv', {
+            blocks: [3]
+        });
+
+
+        const day = new Cleave('#checkout-day', {
+            date: true,
+            datePattern: ['d']
+        });
+
+        document.getElementById("checkout-month").onkeyup = function() {
+            if (this.value.length == 2) {
+                document.getElementById("checkout-day").focus();
+            }
+        }
+    </script>
+</body>

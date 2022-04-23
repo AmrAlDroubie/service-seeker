@@ -119,7 +119,7 @@ body {
     background-color: #25d366;
     color: #fff;
     border-radius: 50%;
-    font-size: 22px;
+    font-size: 26px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1734,4 +1734,187 @@ input::-webkit-inner-spin-button {
 
 .analytics-dash-box3 {
     background-image: url("../images/dash_icon_analytics_back3.svg");
+}
+
+
+/* -- dash mycourse -- */
+
+.dash-mycourses-pagination .page-item:not(:last-of-type) {
+    margin-left: 12px;
+    border-radius: 7px;
+}
+
+.dash-mycourses-pagination .page-link {
+    width: 31px;
+    height: 31px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background-color: #ececec;
+    color: #9f9f9f;
+    font-size: 17px;
+}
+
+.dash-mycourses-pagination .page-link:hover {
+    color: #fff;
+    background-color: #9866b7;
+}
+
+.page-item:last-child .page-link,
+.page-item:first-child .page-link {
+    border-radius: 7px;
+}
+
+.page-item:last-child .page-link {
+    background-color: #9866b7;
+    color: #fff;
+}
+
+.page-item.disabled a {
+    color: #a8a8a8 !important;
+}
+
+.page-item.active .page-link {
+    background-color: #9866b7;
+    border-color: #9866b7;
+    color: #fff;
+}
+
+
+/* -- dash settings -- */
+
+.dash-subs {
+    min-width: 600px;
+}
+
+.dash-subs-table {
+    width: 100%;
+}
+
+.dash-subs-table thead tr {
+    position: relative;
+}
+
+.dash-subs-table thead tr::after {
+    width: 100%;
+    height: 0px;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    content: "";
+    right: 0;
+    z-index: -1;
+    margin-bottom: 20px;
+}
+
+.dash-subs-table th {
+    padding: 12px 0;
+    width: 25%;
+    background-color: #f2f2f2;
+    color: #616161;
+    font-weight: bold;
+}
+
+.dash-subs-table th:first-of-type {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.dash-subs-table th:last-of-type {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.dash-subs-table tr {
+    border-bottom: 0;
+}
+
+.dash-subs-table th:first-of-type,
+.dash-subs-table td:first-of-type {
+    padding-right: 15px;
+}
+
+.dash-subs-table td:first-of-type {
+    font-weight: bold;
+}
+
+.dash-subs-table tbody tr:not(:last-of-type) {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.dash-subs-table td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+/*  -- dashboard settings -- */
+
+.dash-settings-box {
+    padding: 10px 12px;
+    border-radius: 13px;
+    box-shadow: 0 20px 22px rgba(0, 0, 0, 8%);
+}
+
+.dash-settings-box h3 {
+    font-size: 18px;
+    display: flex;
+}
+
+.dash-settings-box h3::before {
+    content: "";
+    width: 3px;
+    height: 23px;
+    background-color: #9866b7;
+    border-radius: 5px;
+    margin-left: 13px;
+}
+
+.dash-settings-box img {
+    width: 78px;
+    height: 78px;
+    border-radius: 11px;
+}
+
+.dash-settings-box input {
+    border: 1px solid #d6d6d6;
+    border-radius: 20px;
+    padding: 5px 5px 5px 0;
+    text-align: right;
+}
+
+.dash-settings-box a {
+    background-color: #2f2f2f;
+}
+
+
+/* -- checkout page -- */
+
+.checkout-content input {
+    background-color: #fcfcfc;
+    border: 1px solid #edeff3;
+    border-radius: 10px;
+    padding-right: 15px;
+}
+
+.checkout-content input::placeholder {
+    color: #b9b9b9;
+}
+
+.checkout-content input {
+    color: #6b6b6b;
+}
+
+.checkout-content input:focus {
+    color: #9866b7;
+    border-color: #9866b7;
+}
+
+.deserved-amount {
+    background-color: #fbf5ff;
+    border: 1px solid #9866b7;
+    border-radius: 15px;
+    max-width: 424px;
 }
